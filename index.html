@@ -274,7 +274,14 @@
       <section class="s2">
         <div class="main-container">
           <h3 id="projects-header">Get In Touch</h3>
-          <form id="contact-form" action="submit">
+          <form
+            name="peter-web"
+            id="contact-form"
+            method="POST"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+            action="submit"
+          >
             <label for="name">Name</label>
             <input type="text" class="input-field" name="name" />
 
@@ -285,6 +292,7 @@
             <input type="email" class="input-field" name="email" />
 
             <label for="message">Message</label>
+            <div data-netlify-recaptcha="true"></div>
             <textarea
               type="textarea"
               class="input-field"
