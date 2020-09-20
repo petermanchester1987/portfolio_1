@@ -1,4 +1,17 @@
-console.log("ITS WORKING!");
+const loaderHolder = document.querySelector(".loader-holder");
+const main = document.querySelector("main");
+
+function loadStart() {
+  setTimeout(() => {
+    loaderHolder.style.opacity = 0;
+    loaderHolder.style.display = "none";
+
+    main.style.display = "block";
+
+    setTimeout(() => (main.style.opacity = 1), 50);
+  }, 3000);
+}
+loadStart();
 
 let theme = localStorage.getItem("theme");
 
