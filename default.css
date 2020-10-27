@@ -304,12 +304,21 @@ main {
   left: -5px;
 }
 
+.contact-link:hover {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
 .about-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   padding-bottom: 50px;
   padding-top: 50px;
   gap: 100px;
+}
+
+.about-me-link:hover {
+  font-weight: 900;
 }
 
 #skills {
@@ -326,6 +335,10 @@ main {
 
 .social-links a {
   margin-bottom: 1rem;
+}
+
+.social-links a:hover {
+  transform: scale(1.5, 1.5);
 }
 
 #social_img {
