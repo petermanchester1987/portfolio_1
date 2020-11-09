@@ -67,7 +67,6 @@ ScrollTrigger.defaults({
 gsap.from('#social_img', { 
   scrollTrigger: {
       trigger:".social-links",
-      markers: true,
       toggleActions: "play none play reset"
   }, 
   x: "200px",
@@ -79,7 +78,6 @@ gsap.from('#social_img', {
 gsap.from('#skills', { 
   scrollTrigger: {
       trigger:"#skills",
-      markers: true,
       toggleActions: "play none play reset"
   }, 
   x: "-200px",
