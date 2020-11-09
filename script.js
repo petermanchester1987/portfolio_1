@@ -1,17 +1,3 @@
-const loaderHolder = document.querySelector(".loader-holder");
-const main = document.querySelector("main");
-
-function loadStart() {
-  setTimeout(() => {
-    loaderHolder.style.opacity = 0;
-    loaderHolder.style.display = "none";
-
-    main.style.display = "block";
-
-    setTimeout(() => (main.style.opacity = 1), 50);
-  }, 3000);
-}
-loadStart();
 
 let theme = localStorage.getItem("theme");
 
@@ -44,3 +30,69 @@ for (let i = 0; themeDots.length > i; i++) {
     setTheme(mode);
   });
 }
+
+
+const tl = gsap.timeline({defaults: {
+  ease: 'power1.out',
+  
+}})
+
+tl.to('.text', { y: '0%', duration: 1, stagger: 0.75});
+
+tl.to('.intro', {y: "-100%", duration: 1.5, delay: 2.5});
+
+tl.fromTo('.fade-2', { opacity: 0}, {opacity: 1, duration: 1.5}, "-=0.5");
+
+tl.from('#preview', {
+  x: "-30px",
+  y: "-30px",
+  duration: 6,
+  repeat: 3,
+  repeatDelay: 8,
+  yoyo: true,
+  ease:"power2.inOut", 
+  force3D: true,
+}, "-=0.5")
+
+gsap.registerPlugin(ScrollTrigger)
+
+ScrollTrigger.defaults({
+  toggleActions: "restart pause resume pause"
+});
+
+
+
+
+
+gsap.from('#social_img', { 
+  scrollTrigger: {
+      trigger:".social-links",
+      markers: true,
+      toggleActions: "play none play reset"
+  }, 
+  x: "200px",
+  duration: 3,  
+  ease:"power2.inOut", 
+  force3D: true,
+  anticipatePin: 1,
+});
+gsap.from('#skills', { 
+  scrollTrigger: {
+      trigger:"#skills",
+      markers: true,
+      toggleActions: "play none play reset"
+  }, 
+  x: "-200px",
+  duration: 3,
+  ease:"power2.inOut", 
+  force3D: true,
+  anticipatePin: 1,
+});
+
+
+
+
+
+
+
+

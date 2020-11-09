@@ -79,20 +79,7 @@ h6 {
 }
 
 main {
-  opacity: 0;
-  display: none;
-  transition: opacity 1s ease-in;
-}
-
-.loader-holder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  background: gradient(linear, left top, right top, from(#333333), to(#eaeaea));
-  background: linear-gradient(90deg, #333333, #eaeaea);
-  box-shadow: inset 0px 0px 90px rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 .s1 {
@@ -104,7 +91,7 @@ main {
 .s2 {
   background-color: var(--secondaryColor);
   border-bottom: 1px solid var(--borderColor);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .main-container {
@@ -304,9 +291,13 @@ main {
   left: -5px;
 }
 
+.contact-link {
+  border-bottom: none;
+  transition: all 1s ease-in-out;
+}
+
 .contact-link:hover {
-  font-size: 1.1rem;
-  font-weight: bold;
+  border-bottom: 1px solid var(--themeDotBorder);
 }
 
 .about-wrapper {
@@ -497,7 +488,7 @@ main {
   }
 }
 
-/* LOADING */
+/* LOADING
 
 .loader {
   width: 100px;
@@ -574,4 +565,33 @@ main {
 
 .loader {
   animation: spin 5s infinite linear;
+} */
+
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.intro-text h1 span.text {
+  color: rgb(233, 233, 233);
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
 }
