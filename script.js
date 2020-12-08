@@ -31,28 +31,26 @@ for (let i = 0; themeDots.length > i; i++) {
   });
 }
 
-
 const tl = gsap.timeline({defaults: {
   ease: 'power1.out',
-  
 }})
 
-tl.to('.text', { y: '0%', duration: 1, stagger: 0.75});
+// tl.to('.text', { y: '0%', duration: 1, stagger: 0.75});
 
-tl.to('.intro', {y: "-100%", duration: 1.5, delay: 2.5});
+// tl.to('.intro', {y: "-100%", duration: 1.5, delay: 2.5});
 
 tl.fromTo('.fade-2', { opacity: 0}, {opacity: 1, duration: 1.5}, "-=0.5");
 
-tl.from('#preview', {
-  x: "-30px",
-  y: "-30px",
-  duration: 6,
-  repeat: 3,
-  repeatDelay: 8,
-  yoyo: true,
-  ease:"power2.inOut", 
-  force3D: true,
-}, "-=0.5")
+// tl.from('#preview', {
+//   x: "-30px",
+//   y: "-30px",
+//   duration: 6,
+//   repeat: 3,
+//   repeatDelay: 8,
+//   yoyo: true,
+//   ease:"power2.inOut", 
+//   force3D: true,
+// }, "-=0.5")
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -70,7 +68,7 @@ gsap.from('#social_img', {
       toggleActions: "play none play reset"
   }, 
   x: "200px",
-  duration: 3,  
+  duration: 2,  
   ease:"power2.inOut", 
   force3D: true,
   anticipatePin: 1,
@@ -81,7 +79,7 @@ gsap.from('#skills', {
       toggleActions: "play none play reset"
   }, 
   x: "-200px",
-  duration: 3,
+  duration: 2,
   ease:"power2.inOut", 
   force3D: true,
   anticipatePin: 1,

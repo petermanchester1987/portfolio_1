@@ -567,7 +567,7 @@ main {
   animation: spin 5s infinite linear;
 } */
 
-.intro {
+/* .intro {
   background: black;
   position: fixed;
   top: 0;
@@ -584,8 +584,8 @@ main {
   font-family: "Russo One", sans-serif;
   font-weight: 500;
   font-size: 3.5rem;
-}
-
+} */
+/* 
 .hide {
   background: black;
   overflow: hidden;
@@ -594,4 +594,4 @@ main {
 .hide span {
   transform: translateY(100%);
   display: inline-block;
-}
+} */
